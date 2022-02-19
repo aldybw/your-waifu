@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Waifu</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="brand">
+            <a href="#">Your<span>Waifu.</span></a>
+          </li>
+          <li class="list-menu">
+            <a href="#" class="btn-custom-primary dropdown-toggle">Menu</a>
+          </li>
+          <li><a href="#" class="btn-custom-primary">Login</a></li>
+          <li><a href="#myProfile">Contact Me</a></li>
+          <li><a href="#favourites">Favourites</a></li>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="content">
+        <div class="hero-banner">
+          <div class="hero-wrapper">
+            <img src="assets/images/hero-banner.jpg" alt="" />
+          </div>
+          <div class="description">
+            <h1>Baca Artikel Anime Menarik Pilihanmu</h1>
+            <p>
+              Website ini menyediakan kumpulan artikel yang mengulas mengenai
+              kisah anime tersebut. Tetapi artikel tersebut berisi informasi
+              anime secara umum saja. Kami juga akan merekomendasikan manga dan
+              anime dalam artikel tersebut.
+            </p>
+            <a href="#favourites" class="btn-custom-primary">Read More</a>
+          </div>
+        </div>
+
+        <div id="favourites" class="favourites">
+          <h2>Pilihan Artikel Anime Terfavorit Untukmu!</h2>
+
+          <div id="animeList" class="flex-anime-column"></div>
+        </div>
+      </div>
+
+      <hr />
+
+      <aside id="myProfile" class="profile-wrapper">
+        <h2>Tentang Saya</h2>
+        <article class="my-profile card">
+          <div class="photo-profile">
+            <img src="assets/images/aldy.jpg" alt="" />
+          </div>
+          <div class="about-me">
+            <h3>Aldycky Bagus Witjaksana</h3>
+            <h4>BACKEND DEVELOPER</h4>
+            <p>
+              "Kekuatanmu selalu berasal dari dalam dirimu sendiri. Terima diri
+              sendiri, lalu perbaiki diri sendiri. Ganbatte!"
+            </p>
+            <a href="#" class="btn-custom-primary">Hire Me</a>
+          </div>
+        </article>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&#169; Copyright 2022 Aldy. All rights reserved</p>
+    </footer>
+
+    <script src="assets/scripts/add-content.js"></script>
+  </body>
+</html>
