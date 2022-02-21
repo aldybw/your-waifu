@@ -28,13 +28,6 @@ const contentList = [
     description:
       "Serial ini menceritakan kehidupan seorang anak bernama Kousei Arima...",
   },
-  {
-    id: "anime-4",
-    animeTitle: "Your Lie in April ",
-    imageUrl: "assets/images/anime-4.jpg",
-    description:
-      "Serial ini menceritakan kehidupan seorang anak bernama Kousei Arima...",
-  },
 ];
 
 function renderAnimeContent() {
