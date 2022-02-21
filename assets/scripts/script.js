@@ -1,3 +1,4 @@
+// add content
 const contentList = [
   {
     id: "anime-1",
@@ -19,6 +20,13 @@ const contentList = [
     imageUrl: "assets/images/anime-3.jpg",
     description:
       "Dr. Ramune bercerita tentang seorang dokter spesialis yang ahli...",
+  },
+  {
+    id: "anime-4",
+    animeTitle: "Your Lie in April ",
+    imageUrl: "assets/images/anime-4.jpg",
+    description:
+      "Serial ini menceritakan kehidupan seorang anak bernama Kousei Arima...",
   },
   {
     id: "anime-4",
@@ -65,3 +73,11 @@ function renderAnimeContent() {
 }
 
 renderAnimeContent();
+
+// toggle-button
+const toggleButton = document.getElementsByClassName("toggle-button")[0];
+const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+
+toggleButton.addEventListener("click", () => {
+  navbarLinks.classList.toggle("active");
+});

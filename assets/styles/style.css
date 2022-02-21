@@ -73,63 +73,77 @@ hr {
   margin: 20px auto;
 }
 
-.list-menu {
-  display: none;
-}
-
 header {
   display: inline;
 }
 
-nav {
+.navbar {
   position: sticky;
   top: 0;
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 8%;
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav ul {
-  overflow: hidden;
-  width: 86%;
-  padding: 0;
-  margin: 0 auto;
-}
-
-nav li {
-  float: right;
+.navbar-links li {
   list-style-type: none;
-  margin: 20px 6px 20px 20px;
-  padding: 6px 0;
 }
 
-nav .brand {
-  float: left;
-  padding: 0;
-  margin: 20px 6px 20px 20px;
+.navbar-links li a {
+  display: block;
+  padding: 1rem;
 }
 
-nav a {
+.navbar a:not(.btn-custom-primary, .brand-logo a) {
   font-size: 18px;
   text-decoration: none;
   color: #222831;
 }
 
-nav .brand a,
-nav .brand a:hover {
+.navbar a:hover:not(.btn-custom-primary, .brand-logo a) {
+  color: #00adb5;
+}
+
+.brand-logo a,
+.brand-logo a:hover {
+  text-decoration: none;
   font-size: 28px;
   font-weight: 700;
   text-shadow: 1px 1px 3px rgba(0, 173, 181, 1);
   color: #222831;
 }
 
-nav a:hover {
+.navbar-links ul {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.brand-logo span {
   color: #00adb5;
 }
 
-nav .brand span {
-  color: #00adb5;
+.toggle-button {
+  position: absolute;
+  top: 3rem;
+  right: 8%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #00adb5;
+  border-radius: 10px;
 }
 
 main {
@@ -314,18 +328,37 @@ footer p {
     margin: 0;
   }
 
-  nav li {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
     display: none;
+    width: 100%;
   }
 
-  .list-menu {
-    display: list-item;
-  }
-
-  nav .brand {
+  .brand-logo {
     display: inline;
     padding: 0;
     margin: 20px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
   }
 
   .my-profile {
@@ -352,11 +385,25 @@ footer p {
     width: 100%;
   }
 
-  nav li {
-    display: none;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  nav .brand {
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .brand-logo {
     display: inline;
     padding: 0;
     margin: 20px 0;
@@ -364,21 +411,41 @@ footer p {
 }
 
 @media screen and (max-width: 414px) {
-  .list-menu a {
-    padding: 10px;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
   }
 }
 
 @media screen and (max-width: 280px) {
-  nav .brand,
-  nav .list-menu {
-    display: block;
-    width: 100%;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .list-menu a {
-    display: block;
-    padding: 10px;
+  .navbar-links ul {
     width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
   }
 }
